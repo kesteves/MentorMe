@@ -37,7 +37,7 @@
 		content	- passes textual content related to question
 	-->
 	<div class='container'>
-		<div class='row well well-lg col-md-8 col-md-offset-2'>
+		<div class='row well well-lg col-md-8 col-md-offset-2 yellowwell'>
 			<h2>Ask a Question</h2>
 			<p>Can't find the answer you're looking for? Ask a new question!</p>
 			<form action="/question" method="post"> <!-- TODO LINK TO FILE -->
