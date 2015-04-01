@@ -84,6 +84,7 @@
 				
 	<!-- form for new response -->
 	<div class='row col-md-10 col-md-offset-1'>
+	<form action="/question" method="post">
 		<div>
 			<h2> Post a response:</h2>
 		</div>
@@ -107,6 +108,7 @@
 		<div class='col-md-8 col-md-offset-5'>
 			<button type='submit' class='btn btn-default'>Submit</button>
 		</div>
+	</form>
 	</div>
 				
 						
