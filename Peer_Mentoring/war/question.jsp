@@ -115,6 +115,7 @@
 				
 				
 		</div>
+		<div class=' row col-md-12'><br/><br/><br/></div>
 	<!-- BEGIN FOOTER -->
 	<jsp:include page="/Footer.jsp" />
 	<!-- END FOOTER -->
