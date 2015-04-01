@@ -54,8 +54,8 @@ public class Question {
 	private String title;
 	@Persistent
 	private String questionContent;
-	//@Persistent
-	//private String[] tags;
+	@Persistent
+	private List<Answer> answers;
 	@Persistent
 	private boolean isHonorCodeCompliant;
 	
@@ -80,6 +80,10 @@ public class Question {
 			pm.close();
 		}
 		
+	}
+	//method to set the answer to the answer collection for the question
+	public void setAnswer(Answer ans){
+		answers.add(ans);
 	}
 	
 	@SuppressWarnings("unchecked")

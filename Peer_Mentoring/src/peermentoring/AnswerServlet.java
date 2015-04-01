@@ -20,13 +20,15 @@ import javax.servlet.http.*;
 @SuppressWarnings("serial")
 public class AnswerServlet extends HttpServlet {
 
-	public void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws IOException{
+	public void doPost(HttpServletRequest request, HttpServletResponse response)throws IOException{
 		
 		String answer = request.getParameter("answer");
 		int questionId = Integer.parseInt(request.getParameter("questionID"));
-		Answer.createAnswer(answer, questionId);
-		
+		Answer a = Answer.createAnswer(answer, questionId);
+		Question q = Question.getAQuestion(questionId);
+		//add the answer to the question object
+		q.setAnswer(a);
+		//modify the redirect url here to whatever you named the jsp on the frontend.
 		response.sendRedirect("/question.jsp?qid=" + questionId);
 		
 	}

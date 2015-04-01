@@ -37,6 +37,7 @@ import com.google.appengine.api.datastore.FetchOptions;
 import com.google.appengine.api.users.User;
 
 @PersistenceCapable
+@Inheritance(customStrategy = "complete-table")
 public class Answer {
 	private static int numberOfAnswers = 0;
 	
@@ -52,15 +53,14 @@ public class Answer {
 	private int questionId;
 	
 	private Answer(String answerContent, int questionId) {
-		this.answerId = ++numberOfAnswers;
+		this.answerId = numberOfAnswers++;
 		this.answerContent = answerContent;
 		this.questionId = questionId;
 	}
 	
-	public static void createAnswer(String answerContent, int questionId) {
-		
-		
+	public static Answer createAnswer(String answerContent, int questionId){
+		//create the answer
+		Answer a = new Answer(answerContent, questionId);
+		return a;
 	}
-	
-	
 }
