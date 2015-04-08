@@ -7,13 +7,10 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 	<title>View All Questions</title>
-	<!-- Bootstrap reference may need to be modified depending on file structure -->
 	<link href='css/bootstrap.min.css' rel='stylesheet' />
 	<link href='css/main2.css' rel='stylesheet' />
-		<!-- HARD CODED STYLES HERE -->
 	<link href="css/footer.css" rel="stylesheet">
 	<style>
-		
 		.navbar {
 		background-color: #265931;
 		
@@ -26,7 +23,7 @@
 </head>
 <body>
 	<jsp:include page="/navigation.jsp" />
-	<div class="container well yellowwell col-md-10 col-md-offset-1" >
+	<div class="container well yellowwell col-md-10 col-md-offset-1">
 			<%  int qid = Integer.parseInt(request.getParameter("qid"));
 	    Question aQuestion = Question.getAQuestion(qid);
 	    if (aQuestion != null){
